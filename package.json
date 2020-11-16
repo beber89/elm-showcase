@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "scss": "node .\\node_modules\\node-sass\\bin\\node-sass -o css\\ src\\scss\\",
+    "serve": ".\\node_modules\\.bin\\concurrently --kill-others \"serve -s build\" \"node admin_elm_mockserver/index"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}

@@ -1,0 +1,196 @@
+/*
+  elm-hot creates an additional div wrapper around the app to make HMR possible.
+  This could break styling in development mode if you are using Elm UI.
+
+  More context in the issue:
+    https://github.com/halfzebra/create-elm-app/issues/320
+*/
+[data-elm-hot="true"] {
+  height: inherit; }
+
+nav a {
+  color: #7272d6; }
+
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px; }
+
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px; }
+
+.shd-r {
+  box-shadow: 3px 0 1px 0px #c6ced4 !important;
+  background-color: #f7f7f7; }
+
+.shd-l {
+  box-shadow: -3px 0 1px 0px #c6ced4 !important;
+  background-color: #f7f7f7;
+  }
+
+.hoverable:hover {
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.175) !important; }
+
+.bordered {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #778899;
+  border-radius: 5px; }
+
+.demo-list-two {
+  width: 300px; }
+
+.shadowed {
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.175) !important; }
+
+img {
+  max-width: 50px; }
+
+.item-list {
+  padding: 0;
+  padding-left: 16px;
+  margin-bottom: 3px; }
+
+.item-list .mdl-list__item-secondary-content {
+  width: 30%;
+  height: 100%; }
+
+/* For loader component */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  z-index: 1; }
+
+
+ /* date picker */
+
+ .elm-datepicker--container {
+   position: relative; }
+
+ .elm-datepicker--input:focus {
+   outline: 0;
+ }
+
+ .elm-datepicker--picker {
+   position: absolute;
+   border: 1px solid #CCC;
+   z-index: 10;
+   background-color: white; }
+
+ .elm-datepicker--picker-header,
+ .elm-datepicker--weekdays {
+   background: #F2F2F2; }
+
+ .elm-datepicker--picker-header {
+   display: flex;
+   align-items: center; }
+
+ .elm-datepicker--prev-container,
+ .elm-datepicker--next-container {
+   flex: 0 1 auto;
+   cursor: pointer; }
+
+ .elm-datepicker--month-container {
+   flex: 1 1 auto;
+   padding: 0.5em;
+   display: flex;
+   flex-direction: column; }
+
+ .elm-datepicker--month,
+ .elm-datepicker--year {
+   flex: 1 1 auto;
+   cursor: default;
+   text-align: center; }
+
+ .elm-datepicker--year {
+   font-size: 0.6em;
+   font-weight: 700; }
+
+ .elm-datepicker--prev,
+ .elm-datepicker--next {
+   border: 6px solid transparent;
+   background-color: inherit;
+   display: block;
+   width: 0;
+   height: 0;
+   padding: 0 0.2em; }
+
+ .elm-datepicker--prev {
+   border-right-color: #AAA; }
+   .elm-datepicker--prev:hover {
+     border-right-color: #BBB; }
+
+ .elm-datepicker--next {
+   border-left-color: #AAA; }
+   .elm-datepicker--next:hover {
+     border-left-color: #BBB; }
+
+ .elm-datepicker--table {
+   border-spacing: 0;
+   border-collapse: collapse;
+   font-size: 0.8em; }
+   .elm-datepicker--table td {
+     width: 2em;
+     height: 2em;
+     text-align: center; }
+
+ .elm-datepicker--row {
+   border-top: 1px solid #F2F2F2; }
+
+ .elm-datepicker--dow {
+   border-bottom: 1px solid #CCC;
+   cursor: default; }
+
+ .elm-datepicker--day {
+   cursor: pointer; }
+   .elm-datepicker--day:hover {
+     background: #F2F2F2; }
+
+ .elm-datepicker--disabled {
+   cursor: default;
+   color: #DDD; }
+   .elm-datepicker--disabled:hover {
+     background: inherit; }
+
+ .elm-datepicker--picked {
+   color: white;
+   background: darkblue; }
+   .elm-datepicker--picked:hover {
+     background: darkblue; }
+
+ .elm-datepicker--today {
+   font-weight: bold; }
+
+ .elm-datepicker--other-month {
+   color: #AAA; }
+   .elm-datepicker--other-month.elm-datepicker--disabled {
+     color: #EEE; }
+   .elm-datepicker--other-month.elm-datepicker--picked {
+     color: white; }
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
